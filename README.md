@@ -7,7 +7,7 @@ The web app is hosted online (through GitHub Pages) and can be freely accessed o
 Alternatively, since the web app contains no dependencies on any online services or databases, one may clone this repository and run the web app locally by opening `index.html`.
 
 ## Using the web app
-1. Input is taken in the form of a scientific notation, with the exponent part to be represented as `^n`. So if one were to enter the value `127.0x105⁵`, then they must enter `127.0x10^5` into the input text box.
+1. Input is taken in the form of a scientific notation, with the exponent part to be represented as `^n`. So if one were to enter the value `127.0x10⁵`, then they must enter `127.0x10^5` into the input text box.
 2. Pressing the `Convert` button will start the conversion process.
 3. Output in the binary and hexadecimal form will be displayed below the `Convert` button.
 4. An additional option to download the result as a text file can be done by clicking the button `Download Output` below the displayed results.
