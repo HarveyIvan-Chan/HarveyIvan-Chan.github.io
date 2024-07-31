@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>IEEE-754 Decimal-32 Floating-Point Converter</h1>
+        <h1>IEEE-754 Decimal-32<br>Floating-Point Converter</h1>
         <label for="decimalInput">Enter Decimal Number:</label>
         <input type="text" id="decimalInput" placeholder="e.g., 127x10^5">
         <br><br>
@@ -27,11 +27,15 @@
         <br><br>
 
         <div id="output">
-            <p><strong>Binary Output:</strong> <span id="binaryOutput"></span></p>
-            <p><strong>Hexadecimal Output:</strong> <span id="hexOutput"></span></p>
+            <p><strong>BINARY OUTPUT<br></strong> <span id="binaryOutput"></span></p>
+            <p><strong>HEXADECIMAL OUTPUT<br></strong> <span id="hexOutput"></span></p>
             <button onclick="downloadOutput()">Download Output</button>
         </div>
     </div>
+
+    <!-- Background Effect Container -->
+    <div id="backgroundEffect"></div>
+
     <script src="script.js"></script>
 </body>
 </html>

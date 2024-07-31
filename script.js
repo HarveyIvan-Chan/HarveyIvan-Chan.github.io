@@ -29,6 +29,36 @@ function bcdToDpd(first, second, third) {
     return dpd.toString(2);
 }
 
+function startBackgroundEffect() {
+    const effectElement = document.getElementById('backgroundEffect');
+    effectElement.innerHTML = ''; // Clear previous content
+
+    const numRows = Math.floor(window.innerHeight / 16); // Adjust based on font-size
+    const numCols = Math.floor(window.innerWidth / 8);  // Adjust based on font-size
+
+    // Create a grid of 0s and 1s
+    for (let i = 0; i < numRows; i++) {
+        let row = '';
+        for (let j = 0; j < numCols; j++) {
+            row += Math.random() < 0.5 ? '0' : '1';
+        }
+        effectElement.innerHTML += row + '<br>';
+    }
+
+    effectElement.style.display = 'block';
+
+    // Fade out the effect after a short time
+    setTimeout(() => {
+        effectElement.style.opacity = 1;
+        effectElement.style.transition = 'opacity 1s ease-out';
+        effectElement.style.opacity = 0;
+        setTimeout(() => {
+            effectElement.style.display = 'none';
+            effectElement.style.opacity = 1; // Reset opacity for next use
+        }, 1000);
+    }, 100); // Start effect immediately
+}
+
 function convert() {
     const decimalValue = document.getElementById('decimalInput').value;
     const roundingMethod = document.getElementById('roundingMethod').value;
@@ -47,6 +77,7 @@ function convert() {
 
     document.getElementById('binaryOutput').innerText = binaryOutput;
     document.getElementById('hexOutput').innerText = hexOutput;
+    startBackgroundEffect();
 }
 
 // validates input if NaN

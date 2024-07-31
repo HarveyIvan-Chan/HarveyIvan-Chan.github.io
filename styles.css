@@ -1,87 +1,117 @@
-/* Reset some default styles */
-body, h1, p, label, select, input, button {
+/* styles.css */
+
+/* Basic reset for consistency across browsers */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styles */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #0f0f0f; /* Dark background for a hacker feel */
+    color: #00ff00; /* Bright green text to simulate old terminal colors */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for hacker style */
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
+/* Container styling */
 .container {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 600px;
+    width: 80%;
+    max-width: 600px; /* Adjusted for better centering */
+    padding: 1rem;
+    background-color: #1a1a1a; /* Slightly lighter background for container */
+    border-radius: 8px;
+    border: 2px solid #00ff00; /* Green border for the container */
+    text-align: center; /* Center text inside the container */
 }
 
+/* Heading styling */
 h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-label {
-    font-weight: bold;
-    margin-right: 10px;
+/* Input and button styling */
+input[type="text"], select, button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #00ff00;
+    border-radius: 4px;
+    background-color: #0f0f0f;
+    color: #00ff00;
+    display: block; /* Ensure inputs and buttons are centered */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 input[type="text"] {
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-select {
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
+    width: calc(100% - 2rem); /* Make text input full width */
 }
 
 button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    font-size: 16px;
+    background-color: #00ff00;
+    color: #0f0f0f;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #00cc00;
 }
 
+/* Output section styling */
 #output {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    border: 1px solid #00ff00;
     border-radius: 4px;
+    color: crimson; /* Default color for output text */
 }
 
 #binaryOutput, #hexOutput {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.2em;
-    color: #007bff;
-    word-break: break-all;
+    font-weight: bold;
 }
 
-p {
-    margin-bottom: 10px;
+/* Links and other text styling */
+a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Background Effect Styles */
+#backgroundEffect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;  /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background: black;
+    color: lime;
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 1;
+    overflow: hidden;
+    z-index: 1; /* Ensure it's behind the main content */
+    display: none;
+    pointer-events: none; /* Allow interaction with underlying elements */
+}
+
+@keyframes printEffect {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
