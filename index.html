@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decimal-32 Floating Point Converter</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Decimal-32 Floating Point Converter</h1>
-    <label for="decimalInput">Enter Decimal Number:</label>
-    <input type="text" id="decimalInput" placeholder="e.g., 127x10^5">
-    <br><br>
+    <div class="container">
+        <h1>IEEE-754 Decimal-32 Floating-Point Converter</h1>
+        <label for="decimalInput">Enter Decimal Number:</label>
+        <input type="text" id="decimalInput" placeholder="e.g., 127x10^5">
+        <br><br>
 
-    <label for="roundingMethod">Rounding Method:</label>
-    <select id="roundingMethod">
-        <option value="toZero">Round to 0</option>
-        <option value="toPosInf">Round to +infinity</option>
-        <option value="toNegInf">Round to -infinity</option>
-        <option value="toNearAway">Round to nearest, ties away from zero</option>
-        <option value="toNearEven">Round to nearest, ties to even</option>
-    </select>
-    <br><br>
+        <label for="roundingMethod">Rounding Method:</label>
+        <select id="roundingMethod">
+            <option value="toZero">Round to 0</option>
+            <option value="toPosInf">Round to +infinity</option>
+            <option value="toNegInf">Round to -infinity</option>
+            <option value="toNearAway">Round to nearest, ties away from zero</option>
+            <option value="toNearEven">Round to nearest, ties to even</option>
+        </select>
+        <br><br>
 
-    <button onclick="convert()">Convert</button>
-    <br><br>
+        <button onclick="convert()">Convert</button>
+        <br><br>
 
-    <div id="output">
-        <p><strong>Binary Output:</strong> <span id="binaryOutput"></span></p>
-        <p><strong>Hexadecimal Output:</strong> <span id="hexOutput"></span></p>
-        <button onclick="downloadOutput()">Download Output</button>
+        <div id="output">
+            <p><strong>Binary Output:</strong> <span id="binaryOutput"></span></p>
+            <p><strong>Hexadecimal Output:</strong> <span id="hexOutput"></span></p>
+            <button onclick="downloadOutput()">Download Output</button>
+        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
